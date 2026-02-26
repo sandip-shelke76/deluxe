@@ -163,14 +163,10 @@ img { max-width: 100%; }
 .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 24px; }
 .product-card { background: var(--dark2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: var(--transition); }
 .product-card:hover { transform: translateY(-8px); border-color: rgba(201,168,76,0.3); box-shadow: var(--shadow-gold); }
-.product-img { height: 220px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-/* .laminated { background: linear-gradient(135deg, #1a1a2e, #16213e);} */
-.laminated { background: linear-gradient(135deg, #1a1a2e, #16213e);}
-.formica { background: linear-gradient(135deg, #1a1a2e, #16213e);}
-.wooden { background: linear-gradient(135deg, #1a1a2e, #16213e);}
-.designer { background: linear-gradient(135deg, #1a1a2e, #16213e);}
-.product-icon { font-size: 4rem; opacity: 0.8; z-index: 1; }
-.product-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; transition: var(--transition); z-index: 2; }
+.product-img { height: 220px; position: relative; overflow: hidden; background: var(--dark3); }
+.product-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.product-card:hover .product-img img { transform: scale(1.05); }
+.product-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; transition: var(--transition); z-index: 2; }
 .product-card:hover .product-overlay { opacity: 1; }
 .btn-enquire { padding: 10px 20px; background: var(--gold); color: #000; border-radius: 50px; font-size: 0.85rem; font-weight: 700; transition: var(--transition); }
 .btn-enquire:hover { background: var(--gold-light); }
@@ -195,14 +191,10 @@ img { max-width: 100%; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: auto; gap: 16px; margin-bottom: 36px; }
 .gallery-item.tall { grid-row: span 2; }
 .gallery-item.wide { grid-column: span 2; }
-.gallery-img { width: 100%; height: 100%; min-height: 200px; border-radius: var(--radius); position: relative; overflow: hidden; cursor: pointer; }
-.g1 { background: linear-gradient(135deg, #1a1a2e 0%, #2d2d4e 100%); min-height: 420px; }
-.g2 { background: linear-gradient(135deg, #1a2a1a 0%, #2d4e2d 100%); }
-/* .g3 { background: linear-gradient(135deg, #2a1a0e 0%, #4e2d1a 100%); } */
-.g3  { background-image: url('../assets/Close-up\ shot\ of\ laminated\ and\ wooden\ door\ surface\ texture\,\ realistic\ material\ detail\,\ Indian\ lighting\ tone\,\ commercial\ product\ photography\,\ ultra\ sharp\ focus\,\ 4K\ macro\ shot.png shot of laminated and wooden door surface texture, realistic material detail, Indian lighting tone, commercial product photography, ultra sharp focus, 4K macro shot.png'); background-size: cover; background-position: center; }
-.g4 { background: linear-gradient(135deg, #2a2a1a 0%, #4e4e2d 100%); min-height: 200px; }
-.g5 { background: linear-gradient(135deg, #1a2a2a 0%, #2d4e4e 100%); }
-.g6 { background: linear-gradient(135deg, #2a1a2a 0%, #4e2d4e 100%); }
+.gallery-img { width: 100%; height: 100%; min-height: 200px; border-radius: var(--radius); position: relative; overflow: hidden; cursor: pointer; background: var(--dark3); }
+.gallery-item.tall .gallery-img { min-height: 420px; }
+.gallery-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.gallery-img:hover img { transform: scale(1.05); }
 .gallery-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); display: flex; align-items: flex-end; padding: 20px; opacity: 0; transition: var(--transition); }
 .gallery-img:hover .gallery-overlay { opacity: 1; }
 .gallery-overlay span { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gold); }
